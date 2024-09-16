@@ -54,24 +54,27 @@
       password
     }
 
-    if(password == confirmPassword){
-      const jsonData = JSON.stringify(data);
-      fetch('/req/signup', {
-        method: 'POST',
-        headers:{
-          'Content-Type': 'application/json'
-        },
-        body: jsonData
-      })
-              .then(response =>{
-                //alert('succesfull');
-                //if(response.status == 200){
-                //alert('succesfull');
-                //xs}
-              })
+    if (password === confirmPassword) {
+
+        const jsonData = JSON.stringify(data);
+        fetch('/req/signup', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: jsonData
+        })
+                .then(response => {
+                  //alert('succesfull');
+                  //if(response.status == 200){
+                  //alert('succesfull');
+                  //xs}
+                })
+      }
+
+    else{
+      alert('Password does not match');
     }
-
   })
-
 
 </script>
