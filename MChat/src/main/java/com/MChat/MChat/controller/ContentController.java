@@ -16,8 +16,8 @@ public class ContentController {
     public String signup(){
         return "signup";
     }
-    @GetMapping("/first")
+    @GetMapping("/")
     public String home(){
-        return "first.html";
+        return "first";
     }
 }
